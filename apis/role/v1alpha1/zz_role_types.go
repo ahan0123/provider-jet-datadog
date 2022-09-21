@@ -39,6 +39,8 @@ type PermissionParameters struct {
 type RoleObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
 
+	Permission []PermissionObservation `json:"permission,omitempty" tf:"permission,omitempty"`
+
 	UserCount *float64 `json:"userCount,omitempty" tf:"user_count,omitempty"`
 }
 

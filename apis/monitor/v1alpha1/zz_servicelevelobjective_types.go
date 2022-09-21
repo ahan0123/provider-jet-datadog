@@ -41,6 +41,8 @@ type QueryParameters struct {
 
 type ServiceLevelObjectiveObservation struct {
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Thresholds []ThresholdsObservation `json:"thresholds,omitempty" tf:"thresholds,omitempty"`
 }
 
 type ServiceLevelObjectiveParameters struct {

@@ -250,6 +250,15 @@ spec:
                 properties:
                   id:
                     type: string
+                  thresholds:
+                    items:
+                      properties:
+                        targetDisplay:
+                          type: string
+                        warningDisplay:
+                          type: string
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

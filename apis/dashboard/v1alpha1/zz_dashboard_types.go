@@ -1149,6 +1149,8 @@ type DashboardObservation struct {
 	DashboardListsRemoved []*float64 `json:"dashboardListsRemoved,omitempty" tf:"dashboard_lists_removed,omitempty"`
 
 	ID *string `json:"id,omitempty" tf:"id,omitempty"`
+
+	Widget []WidgetObservation `json:"widget,omitempty" tf:"widget,omitempty"`
 }
 
 type DashboardParameters struct {
@@ -3078,6 +3080,7 @@ type GroupBySortQueryParameters struct {
 }
 
 type GroupDefinitionObservation struct {
+	Widget []GroupDefinitionWidgetObservation `json:"widget,omitempty" tf:"widget,omitempty"`
 }
 
 type GroupDefinitionParameters struct {
@@ -16581,6 +16584,8 @@ type WidgetNoteDefinitionParameters struct {
 }
 
 type WidgetObservation struct {
+	GroupDefinition []GroupDefinitionObservation `json:"groupDefinition,omitempty" tf:"group_definition,omitempty"`
+
 	ID *float64 `json:"id,omitempty" tf:"id,omitempty"`
 }
 

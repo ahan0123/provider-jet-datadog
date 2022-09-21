@@ -184,6 +184,13 @@ spec:
                 properties:
                   id:
                     type: string
+                  permission:
+                    items:
+                      properties:
+                        name:
+                          type: string
+                      type: object
+                    type: array
                   userCount:
                     type: number
                 type: object

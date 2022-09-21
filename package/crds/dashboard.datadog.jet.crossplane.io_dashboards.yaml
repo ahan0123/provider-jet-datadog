@@ -25372,6 +25372,25 @@ spec:
                     type: array
                   id:
                     type: string
+                  widget:
+                    items:
+                      properties:
+                        groupDefinition:
+                          items:
+                            properties:
+                              widget:
+                                items:
+                                  properties:
+                                    id:
+                                      type: number
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
+                        id:
+                          type: number
+                      type: object
+                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.

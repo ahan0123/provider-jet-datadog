@@ -132,6 +132,13 @@ func (in *RoleObservation) DeepCopyInto(out *RoleObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.Permission != nil {
+		in, out := &in.Permission, &out.Permission
+		*out = make([]PermissionObservation, len(*in))
+		for i := range *in {
+			(*in)[i].DeepCopyInto(&(*out)[i])
+		}
+	}
 	if in.UserCount != nil {
 		in, out := &in.UserCount, &out.UserCount
 		*out = new(float64)
